@@ -1,0 +1,19 @@
+/* Games Table */ 
+#playerName{
+    width: 45%;
+}
+
+.stat-values{
+    border: none;
+    border-bottom: 1px solid rgb(53, 58, 63);
+    max-width: 35px;
+}
+
+.submit{
+    border: none;
+    color: white;
+    margin: 0px;
+    padding: 6px 12px;
+    background-color: #007BFF;
+    border-radius: 5px;
+}
