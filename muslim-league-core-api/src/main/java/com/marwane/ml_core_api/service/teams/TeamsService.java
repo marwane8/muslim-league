@@ -8,7 +8,7 @@ import com.marwane.ml_core_api.model.view.roster;
 import java.util.List;
 
 public interface TeamsService {
-    List<Team> getAllTeams(int SeasonID);
+    List<Team> getAllTeams( Integer year, String seasonName);
     List<roster> getTeam(int TeamID);
     List<Team> getLeaderboard();
 

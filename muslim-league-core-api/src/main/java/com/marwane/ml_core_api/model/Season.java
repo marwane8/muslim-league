@@ -10,25 +10,25 @@ public class Season {
     private Integer id;
 
     @Column(name = "season_name")
-    private String Season;
+    private String seasonName;
 
     @Column(name = "year")
-    private Integer Year;
+    private Integer year;
 
-    public String getSeason() {
-        return Season;
+    public String getSeasonName() {
+        return seasonName;
     }
 
-    public void setSeason(String season) {
-        Season = season;
+    public void setSeasonName(String season) {
+        seasonName = season;
     }
 
     public Integer getYear() {
-        return Year;
+        return year;
     }
 
     public void setYear(Integer year) {
-        Year = year;
+        year = year;
     }
 
     public Integer getId() {
@@ -39,4 +39,12 @@ public class Season {
         this.id = id;
     }
 
+    @Override
+    public String toString() {
+        return "Season{" +
+                "id=" + id +
+                ", SeasonName='" + seasonName + '\'' +
+                ", Year=" + year +
+                '}';
+    }
 }

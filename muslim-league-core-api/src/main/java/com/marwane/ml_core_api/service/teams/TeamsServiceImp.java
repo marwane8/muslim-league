@@ -1,6 +1,7 @@
 package com.marwane.ml_core_api.service.teams;
 
 import com.marwane.ml_core_api.controller.requests.TeamRequest;
+import com.marwane.ml_core_api.model.Season;
 import com.marwane.ml_core_api.model.Team;
 import com.marwane.ml_core_api.model.view.roster;
 import com.marwane.ml_core_api.service.players.PlayersRepository;
@@ -36,8 +37,10 @@ public class TeamsServiceImp implements TeamsService {
                 .collect(Collectors.toList());
     }
 
-    public List<Team> getAllTeams(int SeasonID){
-        return teamsRepository.getTeamsInSeason(SeasonID);
+    public List<Team> getAllTeams(Integer year, String seasonName){
+        List<Season> seasons = seasonsRepository.findByYearAndSeasonName(year, seasonName);
+        Season season = seasons.get(0);
+        return teamsRepository.findBySeason(season);
     }
 
     public List<Team> getLeaderboard() {

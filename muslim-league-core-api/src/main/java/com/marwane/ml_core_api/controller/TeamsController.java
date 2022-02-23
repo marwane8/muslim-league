@@ -26,6 +26,11 @@ public class TeamsController {
         return teamsService.insertTeam(teamRequest);
     }
 
+    @GetMapping("{year}/{seasonName}")
+    public List<Team> getTeams( @PathVariable("year") int year, @PathVariable("seasonName") String seasonName) {
+        return teamsService.getAllTeams(year,seasonName);
+    }
+
     @GetMapping("{teamID}")
     public List<roster> getTeam(@PathVariable("teamID") int TeamID){
         return teamsService.getTeam(TeamID);
