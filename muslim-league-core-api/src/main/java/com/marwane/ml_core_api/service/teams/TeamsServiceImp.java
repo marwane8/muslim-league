@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.persistence.EntityNotFoundException;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
@@ -26,13 +27,17 @@ public class TeamsServiceImp implements TeamsService {
     SeasonsRepository seasonsRepository;
 
     @Override
-    public List<roster> getTeams(int TeamID) {
+    public List<roster> getTeam(int TeamID) {
         List<roster> roster = teamsRepository.getRoster();
 
         //Return players on roster by team id
         return roster.stream()
                 .filter(player -> player.getTeam_id() == TeamID)
                 .collect(Collectors.toList());
+    }
+
+    public List<Team> getAllTeams(int SeasonID){
+        return teamsRepository.getTeamsInSeason(SeasonID);
     }
 
     public List<Team> getLeaderboard() {

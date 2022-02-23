@@ -27,8 +27,8 @@ public class TeamsController {
     }
 
     @GetMapping("{teamID}")
-    public List<roster> getTeams(@PathVariable("teamID") int TeamID){
-        return teamsService.getTeams(TeamID);
+    public List<roster> getTeam(@PathVariable("teamID") int TeamID){
+        return teamsService.getTeam(TeamID);
     }
 
     @GetMapping("leaders")

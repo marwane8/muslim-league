@@ -32,6 +32,7 @@ class TeamsTab extends Component{
         const team3 = await getTeams('5');
         const team4 = await getTeams('6');
 
+        console.log(team1)
         this.setState({ 
             loading: false,
             team1: team1,
