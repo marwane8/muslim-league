@@ -15,7 +15,7 @@ class Footer extends Component{
                 <li>|</li>
                 <li> <a href="/Policy"> POLICY </a> </li>
                 <li>|</li>
-                <li> <a href="/Contact"> CONTACT US </a> </li>
+                <li> <a href="/contact-us"> CONTACT US </a> </li>
               </ul>
               <h6> Follow Muslim League: </h6>
               <ul className="socials">

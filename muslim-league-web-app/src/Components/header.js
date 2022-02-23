@@ -19,7 +19,7 @@ class Header extends Component{
                         <NavDropdown title="About" id="basic-nav-dropdown">
                             <NavDropdown.Item href="/About">About Us</NavDropdown.Item>
                             <NavDropdown.Item href="/Policy"> League Policy</NavDropdown.Item>
-                            <NavDropdown.Item href="/Contact"> Contact Us</NavDropdown.Item>
+                            <NavDropdown.Item href="/contact-us"> Contact Us</NavDropdown.Item>
                         </NavDropdown>
                         <Nav.Link href="/Schedule">Schedule</Nav.Link>
                         <Nav.Link href="/Stats">Stats</Nav.Link>

@@ -37,7 +37,7 @@ class App extends React.Component {
                <Route path="/Teams" exact component={Teams} />
                <Route path="/Awards" exact component={Awards} />
                <Route path="/Policy" exact component={Policy} />
-               <Route path="/Contact" exact component={Contact} />
+               <Route path="/contact-us" exact component={Contact} />
                <Route path="/Admin" exact component={Admin} />
                <Route path="/addGames" exact component={addGames} />
                <Route path="/addTeams" exact component={addTeams} />
