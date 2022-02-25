@@ -8,6 +8,10 @@ RUN npm ci --silent
 RUN npm install react-scripts@3.4.1 -g --silent
 COPY . ./
 # Arguments
+ARG REACT_APP_API_BASE_URL
+ENV REACT_APP_API_BASE_URL=http://185.28.22.250:8080/api
+
+#Build the application
 RUN npm run build
 
 # production environment
