@@ -24,7 +24,7 @@ class TeamsTab extends Component{
         players: [],
     };
     async componentDidMount(){
-
+        
         getAllTeams()
             .then(response => response.json()
                 .then(json => { 
@@ -33,7 +33,7 @@ class TeamsTab extends Component{
                         players: json[0].players,
                         loading: false })}))
             .catch(error => console.error(error));
-        
+
     }
 
     changeTeams(index) {
