@@ -3,7 +3,7 @@ package com.marwane.ml_core_api.model;
 import javax.persistence.*;
 import java.time.LocalDate;
 
-@Table(name = "Games")
+@Table(name = "games")
 @Entity
 public class Game {
     @Id

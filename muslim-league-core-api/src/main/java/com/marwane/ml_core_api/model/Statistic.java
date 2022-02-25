@@ -2,7 +2,7 @@ package com.marwane.ml_core_api.model;
 
 import javax.persistence.*;
 
-@Table(name = "Statistics", indexes = {
+@Table(name = "statistics", indexes = {
         @Index(name = "game_fk_idx", columnList = "game_id"),
         @Index(name = "player_fk_idx", columnList = "player_id")
 })

@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonManagedReference;
 import javax.persistence.*;
 import java.util.Set;
 
-@Table(name = "Teams", indexes = {
+@Table(name = "teams", indexes = {
         @Index(name = "team_captian_idx", columnList = "team_captain")
 })
 @Entity
@@ -40,7 +40,7 @@ public class Team {
 
     @ManyToMany
     @JsonManagedReference
-    @JoinTable(name = "teamsplayers",
+    @JoinTable(name = "teams_players",
             joinColumns = @JoinColumn(name = "team_id"),
             inverseJoinColumns = @JoinColumn(name = "player_id"))
     Set<Player> players;
