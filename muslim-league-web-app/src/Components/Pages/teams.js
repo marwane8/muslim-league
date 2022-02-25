@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
-import {getTeams} from '../../APIUtils';
+import { getAllTeams } from '../../APIUtils';
 
-import ListGroup from 'react-bootstrap/ListGroup'
-import Tab from 'react-bootstrap/Tab'
 import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
 import Table from 'react-bootstrap/Table'
-
+import { Button,ButtonGroup, Container } from 'react-bootstrap';
+import '../../Assets/Teams.css';
 class Teams extends Component{
     render(){
         return(
@@ -21,152 +20,75 @@ class Teams extends Component{
 class TeamsTab extends Component{
     state = {
         loading: true,
-        team1: [],
-        team2: [],
-        team3: [],
-        team4: [],
+        season: [],
+        players: [],
     };
     async componentDidMount(){
-        const team1 = await getTeams('1');
-        const team2 = await getTeams('2');
-        const team3 = await getTeams('5');
-        const team4 = await getTeams('6');
 
-        console.log(team1)
-        this.setState({ 
-            loading: false,
-            team1: team1,
-            team2: team2,
-            team3: team3,
-            team4: team4,
+        getAllTeams()
+            .then(response => response.json()
+                .then(json => { 
+                    this.setState({
+                        season: json,
+                        players: json[0].players,
+                        loading: false })}))
+            .catch(error => console.error(error));
+        
+    }
+
+    changeTeams(index) {
+        let season = this.state.season
+        this.setState({
+            players: season[index].players
         });
     }
 
     render(){
+        var { season,players } = this.state;
         if (this.state.loading){
             return(
             <div> loading....</div>
             )
         };
         return(
-            <Tab.Container defaultActiveKey="#link1">
-            <Row>
-                <Col sm={4}>
-                <ListGroup>
-
-                    <ListGroup.Item action href="#link1">
-                    {this.state.team1[0].team_name}
-                    </ListGroup.Item>
-
-                    <ListGroup.Item action href="#link2">
-                    {this.state.team2[0].team_name}
-                    </ListGroup.Item>
-
-                    <ListGroup.Item action href="#link3">
-                    {this.state.team3[0].team_name}
-                    </ListGroup.Item>
-
-                    <ListGroup.Item action href="#link4">
-                    {this.state.team4[0].team_name}
-                    </ListGroup.Item>
-
-                </ListGroup>
-                </Col>
-
-
-                <Col sm={8}>
-                <Tab.Content>
-
-                    <Tab.Pane eventKey="#link1">
-                    <Table bordered hover>
-                    <thead className="thead-dark">
-                    <tr>
-                        <th scope="col" >Name</th>
-                        <th scope="col" >POS</th>
-                        <th scope="col" >No.</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                        {this.state.team1.map(team =>(
-                            <tr key={team.id}>
-                            <td> {team.player_name} </td>
-                            <td> {team.player_pos} </td>
-                            <td> {team.player_number} </td>
-                        </tr>
-                        ))}
-                    </tbody>
-                    </Table>
-                    </Tab.Pane>
-
-                    <Tab.Pane eventKey="#link2">
-                        <Table bordered hover>
-                        <thead className="thead-dark">
-                        <tr>
-                            <th scope="col" >Name</th>
-                            <th scope="col" >POS</th>
-                            <th scope="col" >No.</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                            {this.state.team2.map(team =>(
-                                <tr key={team.id}>
-                                <td> {team.player_name} </td>
-                                <td> {team.player_pos} </td>
-                                <td> {team.player_number} </td>
-                            </tr>
+            <Container>
+                <Row>
+                    <Col sm={4}>
+                        <ButtonGroup vertical>
+                            {season.map((team,i)=> (
+                                <Button 
+                                    key={team.id}
+                                    size="lg"
+                                    className="team-button"
+                                    onClick={()=>this.changeTeams(i)}>
+                                        {team.teamName}
+                                    </Button>
                             ))}
-                        </tbody>
-                        </Table>
-                    </Tab.Pane>
+                        </ButtonGroup>
+                    </Col>
 
-                    <Tab.Pane eventKey="#link3">
+                    <Col sm={8}>
                         <Table bordered hover>
-                        <thead className="thead-dark">
-                        <tr>
-                            <th scope="col" >Name</th>
-                            <th scope="col" >POS</th>
-                            <th scope="col" >No.</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                            {this.state.team3.map(team =>(
-                                <tr key={team.id}>
-                                <td> {team.player_name} </td>
-                                <td> {team.player_pos} </td>
-                                <td> {team.player_number} </td>
+                            <thead className="thead-dark">
+                            <tr>
+                                <th scope="col" >Name</th>
+                                <th scope="col" >POS</th>
+                                <th scope="col" >No.</th>
                             </tr>
-                            ))}
-                        </tbody>
+                            </thead>
+                            <tbody>
+                                {players.map(player =>(
+                                    <tr key={player.id}>
+                                    <td> {player.playerName} </td>
+                                    <td> {player.playerPos} </td>
+                                    <td> {player.playerNumber} </td>
+                                </tr>
+                                ))}
+                            </tbody>
                         </Table>
-                    </Tab.Pane>
-
-                    <Tab.Pane eventKey="#link4">
-                        <Table bordered hover>
-                        <thead className="thead-dark">
-                        <tr>
-                            <th scope="col" >Name</th>
-                            <th scope="col" >POS</th>
-                            <th scope="col" >No.</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                            {this.state.team4.map(team =>(
-                                <tr key={team.id}>
-                                <td> {team.player_name} </td>
-                                <td> {team.player_pos} </td>
-                                <td> {team.player_number} </td>
-                            </tr>
-                            ))}
-                        </tbody>
-                        </Table>
-                    </Tab.Pane>
-
-                </Tab.Content>
-
-
-                </Col>
-            </Row>
-            </Tab.Container>
+                    </Col>
+                </Row>
+            </Container>
         )
     }
 }

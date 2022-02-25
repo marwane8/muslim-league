@@ -25,7 +25,12 @@ export function getStandings(){
     return request(url)
 }
 
-export async function getTeams(team){
-    const url = API_BASE_URL + '/teams/' + team;
+export function getTeams(){
+    const url = API_BASE_URL + '/teams/2021/summer'
     return fetch(url).then(response => response.json())
+}
+
+export function getAllTeams(){
+    const url = API_BASE_URL + '/teams/2021/summer'
+    return request(url)
 }

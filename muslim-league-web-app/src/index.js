@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter, Route } from 'react-router-dom'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import './Assets/App.css';
 
 import Header from './Components/header'
 

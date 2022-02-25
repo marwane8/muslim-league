@@ -26,8 +26,6 @@ class WeeklyGames extends React.Component{
     };
 
     async componentDidMount(){
-        console.log("local update")
-        
         getSchedule()
             .then(response => response.json()
                 .then(json => { 
