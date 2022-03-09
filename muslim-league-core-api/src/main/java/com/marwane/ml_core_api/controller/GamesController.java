@@ -22,10 +22,7 @@ public class GamesController {
     private static final Logger log = LoggerFactory.getLogger(MuslimLeagueApplication.class);
 
     @GetMapping
-    public List<schedule> Games(HttpServletRequest request) {
-        String address = request.getRemoteAddr();
-        log.info("Incoming request to games from: " + address);
-        return gamesService.getGames();}
+    public List<schedule> Games() { return gamesService.getGames(); }
 
     @GetMapping("{gameID}/stats")
     public List<playerTotals> getBoxScore(@PathVariable("gameID") int GameID ) { return gamesService.getBoxScore(GameID); }

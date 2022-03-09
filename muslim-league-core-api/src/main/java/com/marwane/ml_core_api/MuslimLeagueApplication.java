@@ -19,6 +19,6 @@ public class MuslimLeagueApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		log.info("<----COMMAND LINE APP 1---->");
+		log.info("<----COMMAND LINE APP---->");
 	}
 }
