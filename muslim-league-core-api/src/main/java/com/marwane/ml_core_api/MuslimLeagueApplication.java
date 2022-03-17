@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
 
 
-@SpringBootApplication(exclude = { SecurityAutoConfiguration.class })
+@SpringBootApplication
 public class MuslimLeagueApplication implements CommandLineRunner {
 
 
@@ -20,6 +20,6 @@ public class MuslimLeagueApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		log.info("<----COMMAND LINE APP---->");
+		log.info("<----COMMAND LINE APP 1---->");
 	}
 }
