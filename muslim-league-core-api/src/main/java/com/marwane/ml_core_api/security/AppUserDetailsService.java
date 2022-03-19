@@ -1,4 +1,4 @@
-package com.marwane.ml_core_api.config;
+package com.marwane.ml_core_api.security;
 
 import com.marwane.ml_core_api.model.User;
 import com.marwane.ml_core_api.service.accounts.UserRepository;
@@ -24,6 +24,15 @@ public class AppUserDetailsService implements UserDetailsService {
                 .orElseThrow(() -> new UsernameNotFoundException("User not found with login: " + usernameOrEmail));
         
         return UserPrincipal.create(user);
+    }
+
+    //Used by JWT Filter
+    @Transactional
+    public UserDetails loadUserById(Long id){
+        User user = userRepository.findById(id)
+                .orElseThrow(() -> new UsernameNotFoundException("User not found with id : " + id));
+
+        return  UserPrincipal.create(user);
     }
 
 }

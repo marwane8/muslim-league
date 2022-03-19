@@ -1,6 +1,5 @@
 package com.marwane.ml_core_api.security;
 
-import com.marwane.ml_core_api.config.UserPrincipal;
 import io.jsonwebtoken.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

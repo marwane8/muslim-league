@@ -1,4 +1,4 @@
-package com.marwane.ml_core_api.config;
+package com.marwane.ml_core_api.security;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.marwane.ml_core_api.model.User;
