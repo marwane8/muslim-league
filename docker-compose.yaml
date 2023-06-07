@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  ml-ui:
+    image: ml-ui
+    ports:
+      - "3000:3000"
+    depends_on:
+      - ml-api
+
+  ml-api:
+    image: ml-api
+    ports:
+      - "8000:80"
+    environment:
+      - USERS_DB_URL=./database/users.db
+      - BBALL_DB_URL=./database/bball.db
+      - SOCCER_DB_URL=./database/soccer.db
+    volumes:
+      - ./muslim-league-api/database:/code/database
