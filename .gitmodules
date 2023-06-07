@@ -1,0 +1,9 @@
+[submodule "muslim-league-ui"]
+	path = muslim-league-ui
+	url = git@github.com:marwane8/muslim-league-ui.git
+[submodule "muslim-league-api"]
+	path = muslim-league-api
+	url = git@github.com:marwane8/muslim-league-api.git
+[submodule "muslim-league-db"]
+	path = muslim-league-db
+	url = git@github.com:marwane8/muslim-league-db.git
