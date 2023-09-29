@@ -13,8 +13,6 @@ services:
     ports:
       - "8000:80"
     environment:
-      - USERS_DB_URL=./database/users.db
-      - BBALL_DB_URL=./database/bball.db
-      - SOCCER_DB_URL=./database/soccer.db
+      - DB_URL=./database/row.db
     volumes:
       - ./muslim-league-api/database:/code/database
