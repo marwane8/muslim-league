@@ -1,7 +1,3 @@
-
-
 export default function Blah() {
-  return (
-    <div>Balhh</div>
-  )
+  return <div className="bg-primary">Balhh</div>;
 }
