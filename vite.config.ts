@@ -3,8 +3,10 @@ import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
+  base: "/muslim-league/",
   plugins: [
     remix({
+      basename: "/muslim-league/",
       ssr: false,
       future: {
         v3_fetcherPersist: true,
