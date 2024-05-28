@@ -36,10 +36,10 @@ export default function Footer() {
               About
             </Link>
             <Link
-              to="/waivers"
+              to="/contact"
               className="link-hover link"
             >
-              Waivers
+              Contact
             </Link>
             <Link
               to="/rules"
@@ -48,10 +48,10 @@ export default function Footer() {
               Rules
             </Link>
             <Link
-              to="/contact"
+              to="/waivers"
               className="link-hover link"
             >
-              Contact
+              Waivers
             </Link>
           </nav>
 

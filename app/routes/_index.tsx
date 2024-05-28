@@ -29,7 +29,7 @@ export default function Home() {
         </Container>
       </div>
 
-      <Container>
+      <Container className="min-h-[420px]">
         <NewsPanel title="UPCOMING">
           Season kickoff for the Muslim Soccer League starts May 10th! Please have your team
           registrations complete In order for the full schedule to release.

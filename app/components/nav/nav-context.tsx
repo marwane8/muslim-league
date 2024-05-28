@@ -25,8 +25,8 @@ export const navLinks = [
 ];
 
 export const sideLinks = [
+  { name: "about" },
+  { name: "contact" },
   { name: "rules", icon: ClipboardDocumentCheckIcon },
   { name: "waivers", icon: DocumentTextIcon },
-  { name: "about" },
-  { name: "contact" }
 ];
