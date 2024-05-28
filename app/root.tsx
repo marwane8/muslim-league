@@ -50,8 +50,8 @@ export default function App() {
       <Navbar path={path} />
       <div className="h-full">
         <Outlet />
-      </div>
       <Footer />
+      </div>
     </div>
   );
 }
