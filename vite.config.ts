@@ -15,5 +15,14 @@ export default defineConfig({
       },
     }),
     tsconfigPaths(),
+    {
+      name: "markdown",
+      transform(src, id) {
+        if (id.endsWith(".md")) {
+          return `export default ${JSON.stringify(src)}`;
+        }
+      },
+    },
   ],
+  assetsInclude: ["**/*.pdf"], // This line includes PDF files in the assets
 });

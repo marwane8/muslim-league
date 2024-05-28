@@ -1,26 +1,40 @@
-import type { MetaFunction } from "@remix-run/node";
-import { Link } from "@remix-run/react";
+import type { MetaFunction } from "@remix-run/react";
+
+import prayerImg from "~/assets/prayer.jpg";
+
+import Container from "~/components/container";
+import NewsPanel from "~/components/news-panel";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "New Remix SPA" },
-    { name: "description", content: "Welcome to Remix (SPA Mode)!" },
+    { title: "MBLCT Home | ProLeagues" },
+    { name: "description", content: "Muslim Basketball League CT Home Page" },
+    {
+      name: "keywords",
+      content: "ProLeagues, Home League Muslim Basketball CT, Basketball, Scores, Stats, Schedule",
+    },
   ];
 };
 
-export default function Index() {
+export default function Home() {
   return (
-    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
-      <h1>Welcome to Remix (SPA Mode)</h1>
-      <ul>
-        <li>
-          <Link to="/blah" >
-          Blah
-          </Link>
+    <>
+      <div
+        style={{ backgroundImage: `url(${prayerImg})` }}
+        className="flex h-64 bg-neutral-500  bg-[length:650px] bg-center bg-no-repeat text-white sm:bg-[length:800px] md:h-80 md:bg-[length:1000px] lg:bg-[length:1100px]  xl:bg-[length:1750px] xl:bg-top"
+      >
+        <Container className="flex flex-col justify-end">
+          <h1 className="text-3xl font-bold md:text-5xl"> Muslim League CT </h1>
+          <h2 className="mb-5 text-xl font-semibold"> Uniting muslim athletes across CT </h2>
+        </Container>
+      </div>
 
-
-        </li>
-      </ul>
-    </div>
+      <Container className="min-h-[420px]">
+        <NewsPanel title="UPCOMING">
+          Season kickoff for the Muslim Soccer League starts May 10th! Please have your team
+          registrations complete In order for the full schedule to release.
+        </NewsPanel>
+      </Container>
+    </>
   );
 }
