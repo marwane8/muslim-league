@@ -12,7 +12,7 @@ export default function About() {
           <h1 className="text-center text-5xl font-bold">ABOUT US</h1>
         </Container>
       </div>
-      <Container>
+      <Container className="min-h-[480px]">
         <article className="lg:prose-lg prose m-auto my-5 max-w-screen-md">
           <h3 className="text-primary">Who are we?</h3>
           <p>

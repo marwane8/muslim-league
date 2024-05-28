@@ -2,6 +2,7 @@ import Container from "~/components/container";
 import court from "~/assets/court.jpg";
 import BasketballPolicy from "~/assets/documents/BASKETBALLPOLICY.pdf";
 import BasketballRules from "~/assets/documents/BASKETBALLRULES.pdf";
+import ParticipantWaiver from "~/assets/documents/PARTICIPANTWAIVER.pdf";
 import { Link } from "@remix-run/react";
 
 export default function Rules() {
@@ -25,6 +26,13 @@ export default function Rules() {
             <Link to="/terms-of-service">
               <li className="link link-neutral font-semibold">Data Terms of Service</li>
             </Link>
+            <a
+              href={ParticipantWaiver}
+              rel="noreferrer"
+              target="_blank"
+            >
+              <li className="link link-neutral font-semibold">Participant Liability Waiver</li>
+            </a>
           </ul>
           <h3 className="text-primary">Muslim Basketball League </h3>
           <p className="my-0">
