@@ -25,21 +25,34 @@ export default function Waivers() {
 
           <h3 className="text-primary">Muslim Basketball League </h3>
           <p className="my-0">
-            Click the following link for the current basketball registration waiver.
+            Click the following link for the lastest basketball season registration forms.
           </p>
           <ul className="list-none text-xl">
             <a
-              href="https://forms.gle/QLH8PRHsa6zEzu3R8"
+              href="https://forms.gle/vTcFHhcBnkEqKL8x9"
               rel="noreferrer"
               target="_blank"
             >
-              <li className="link link-neutral font-semibold">Summer 2024 Basketball Waiver </li>
+              <li className="link link-neutral font-semibold">
+                Summer 2024 Basketball Team Registration
+              </li>
+            </a>
+
+            <a
+              href="https://forms.gle/FrCtLLDyQsWZRqbX7"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <li className="link link-neutral font-semibold">
+                Summer 2024 Basketball Player Waiver
+              </li>
             </a>
           </ul>
           <h3 className="text-primary">Muslim Soccer League </h3>
           <p className="my-0">
-            Click the following link for the current soccer registration waiver.
+            Click the following link for the lastest basketball season registration forms.
           </p>
+
           <ul className="list-none text-xl">
             <a
               href="https://forms.gle/QLH8PRHsa6zEzu3R8"

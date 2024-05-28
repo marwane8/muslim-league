@@ -13,7 +13,7 @@ export default function Soccer() {
         </div>
       )}
       <iframe
-        src="https://www.proleagues.io/mslct/"
+        src="https://www.proleagues.io/mslct/games"
         title="ProLeagues MSLCT Games"
         className="h-screen w-full"
         onLoad={() => setLoaded(false)}
