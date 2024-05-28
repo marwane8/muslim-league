@@ -18,9 +18,9 @@ export default function TopNav() {
   };
 
   return (
-    <nav className="bg-gray-900 text-gray-300">
+    <nav className="flex h-12 items-center bg-gray-900 text-gray-300">
       <Container className="px-5">
-        <div className="w-content  my-auto flex justify-between py-1 ">
+        <div className="w-content  my-auto flex justify-between">
           <div className="flex ">
             <button
               className="mr-2 rounded-sm  focus:bg-neutral-50 focus:bg-opacity-20 focus:ring-2"
