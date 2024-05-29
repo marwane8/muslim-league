@@ -25,6 +25,7 @@ export default function Home() {
       >
         <Container className="flex flex-col justify-end">
           <h1 className="text-3xl font-bold md:text-5xl"> Muslim League CT </h1>
+          <h1 className="text-3xl font-bold md:text-5xl"> Muslim League CT </h1>
           <h2 className="mb-5 text-xl font-semibold"> Uniting muslim athletes across CT </h2>
         </Container>
       </div>
