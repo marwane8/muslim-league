@@ -24,8 +24,8 @@ export default function Home() {
         className="flex h-64 bg-neutral-500  bg-[length:650px] bg-center bg-no-repeat text-white sm:bg-[length:800px] md:h-80 md:bg-[length:1000px] lg:bg-[length:1100px]  xl:bg-[length:1750px] xl:bg-top"
       >
         <Container className="flex flex-col justify-end">
-          <h1 className="text-center text-5xl font-semibold"> Muslim League CT </h1>
-          <h2 className="mb-5 text-center text-2xl">
+          <h1 className="text-center text-3xl sm:text-5xl font-semibold"> Muslim League CT </h1>
+          <h2 className="mb-5 text-center text-lg sm:text-2xl">
             Uniting muslim athletes across CT
           </h2>
         </Container>
