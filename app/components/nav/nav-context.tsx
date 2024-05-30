@@ -28,5 +28,5 @@ export const sideLinks = [
   { name: "about" },
   { name: "contact" },
   { name: "rules", icon: ClipboardDocumentCheckIcon },
-  { name: "waivers", icon: DocumentTextIcon },
+  { name: "registration", icon: DocumentTextIcon },
 ];

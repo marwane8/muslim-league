@@ -48,10 +48,10 @@ export default function Footer() {
               Rules
             </Link>
             <Link
-              to="/waivers"
+              to="/registration"
               className="link-hover link"
             >
-              Waivers
+              Registration 
             </Link>
           </nav>
 
