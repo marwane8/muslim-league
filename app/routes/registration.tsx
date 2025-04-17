@@ -59,10 +59,10 @@ export default function Waivers() {
 function RegisterBasketball() {
   return (
     <>
-      <h3 className="text-primary"> 2024 Basketball League Registration </h3>
+      <h3 className="text-primary"> 2025 Basketball League Registration </h3>
       <p>
         To register your team for the upcoming basketball season, go through the following steps.
-        Registration for the 2024 season will be $1100 per team.
+        Registration for the 2025 season will be $1100 per team.
       </p>
 
       <ul className="steps steps-vertical">
@@ -74,12 +74,12 @@ function RegisterBasketball() {
               <span className="text-base italic">* 1 per team</span>
             </div>
             <a
-              href="https://forms.gle/vTcFHhcBnkEqKL8x9"
+              href="https://forms.gle/ngQuKBWtM7Nqu6qU8"
               rel="noreferrer"
               target="_blank"
             >
               <span className="link link-neutral font-semibold">
-                Summer 2024 Basketball Team Registration Form
+                Summer 2025 Basketball Team Registration Form
               </span>
             </a>
           </div>
@@ -116,12 +116,12 @@ function RegisterBasketball() {
             </div>
 
             <a
-              href="https://forms.gle/FrCtLLDyQsWZRqbX7"
+              href="https://forms.gle/HYAkqBnKFXyZN6xT9"
               rel="noreferrer"
               target="_blank"
             >
               <li className="link link-neutral list-none font-semibold">
-                Summer 2024 Basketball Player Waiver
+                Summer 2025 Basketball Player Waiver
               </li>
             </a>
           </div>
@@ -136,7 +136,7 @@ function RegisterBasketball() {
               <span className="text-base italic">* Pay with zelle to avoid fees</span>
             </div>
             <a
-              href="https://square.link/u/jcqOkHd6"
+              href="https://square.link/u/8QoH0raa"
               rel="noreferrer"
               target="_blank"
             >
@@ -159,10 +159,10 @@ function RegisterBasketball() {
 function RegisterSoccer() {
   return (
     <>
-      <h3 className="text-primary"> 2024 Soccer League Registration </h3>
+      <h3 className="text-primary"> 2025 Soccer League Registration </h3>
       <p>
         To register your team for the upcoming soccer season, go through the following steps.
-        Registration for the 2024 season will be $1150 per team.
+        Registration for the 2025 season will be $1150 per team.
       </p>
 
       <ul className="steps steps-vertical">
@@ -173,40 +173,9 @@ function RegisterSoccer() {
               <br />
               <span className="text-base italic">* 1 per team</span>
             </div>
-            <a
-              href="https://forms.gle/vTcFHhcBnkEqKL8x9"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <span className="link link-neutral font-semibold">
-                Spring 2024 Soccer Team Registration Form
-              </span>
-            </a>
+            <span className="font-semibold">Spring 2025 Soccer Team Registration Form</span>
           </div>
         </li>
-        <li className="step step-primary !my-0">
-          <div className="flex flex-col justify-center text-left">
-            <div>
-              <span className="font-semibold">Pay the 250$ team deposit. </span> <br />{" "}
-              <span className="text-base italic">* Pay with zelle to avoid fees</span>
-            </div>
-            <a
-              href="https://square.link/u/uGNyDviJ"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <span className="btn-primary btn my-2">PAY DEPOSIT</span>
-            </a>
-            <a
-              href={ZellePayment}
-              rel="noreferrer"
-              target="_blank"
-            >
-              <li className="link link-primary list-none font-semibold">PAY WITH ZELLE</li>
-            </a>
-          </div>
-        </li>
-
         <li className="step step-primary !my-0">
           <div className="flex h-48 flex-col justify-center text-left">
             <div>
@@ -216,12 +185,12 @@ function RegisterSoccer() {
             </div>
 
             <a
-              href="https://forms.gle/FrCtLLDyQsWZRqbX7"
+              href="https://forms.gle/2ofRHEarG5Rk2w8U9"
               rel="noreferrer"
               target="_blank"
             >
               <li className="link link-neutral list-none font-semibold">
-                Summer 2024 Soccer Player Waiver
+                Summer 2025 Soccer Player Waiver
               </li>
             </a>
           </div>
@@ -229,14 +198,12 @@ function RegisterSoccer() {
         <li className="step step-primary !my-0">
           <div className="flex flex-col justify-center text-left">
             <div>
-              <span className="font-semibold">
-                Complete the remaining payment of 850$ team payment.
-              </span>
+              <span className="font-semibold">Complete team payment of 1150$ team payment.</span>
               <br />
-              <span className="text-base italic">* Pay with zelle to avoid fees</span>
+              <span className="text-base italic">* Pay with zelle to avoid processing fees</span>
             </div>
             <a
-              href="https://square.link/u/jcqOkHd6"
+              href="https://square.link/u/8aOzekG2"
               rel="noreferrer"
               target="_blank"
             >
